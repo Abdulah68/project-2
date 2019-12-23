@@ -7,13 +7,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-validates :name, presence: true, length: {minimum: 3} # presence means the value is existing meaning it’s not empty
+# validates :name, presence: true, length: {minimum: 3} # presence means the value is existing meaning it’s not empty
 
- validates :name, uniqueness: { case_sensitive: false } # checks the case_sensitive
+#  validates :name, uniqueness: { case_sensitive: false } # checks the case_sensitive
      
- validates :year, numericality: true
+#  validates :year, numericality: true
 
- validates :price, numericality: true
+#  validates :price, numericality: true
      
- validates :name, length: {minimum: 3, maximum: 5}
+#  validates :name, length: {minimum: 3, maximum: 5}
 end

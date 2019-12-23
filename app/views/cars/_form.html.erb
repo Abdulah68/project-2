@@ -3,7 +3,7 @@
     <div id="error_explanation">
       <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
 
-      <ul>
+      <ul> 
         <% car.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
@@ -11,31 +11,32 @@
     </div>
   <% end %>
   <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
+    <%= form.label :img %>
+    <%= form.text_field :img %><hr>
   </div>
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name %><hr>
   </div>
 
   <div class="field">
     <%= form.label :make %>
-    <%= form.text_field :make %>
+    <%= form.text_field :make %><hr>
   </div>
 
   <div class="field">
     <%= form.label :year %>
-    <%= form.text_field :year %>
+    <%= form.text_field :year %><hr>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.text_field :price %><hr>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>

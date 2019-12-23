@@ -1,4 +1,30 @@
 <h1>Editing Car</h1>
+<%= form_for @car, url:{action: "edit"} do |f|%>
+
+<%= f.label :img%>
+<%= f.text_filed :img%>
+<br>
+<%= f.label :name%>
+<%= f.text_filed :name%>
+<br>
+
+<%= f.label :make%>
+<%= f.text_filed :make%>
+<br>
+
+<%= f.label :year%>
+<%= f.text_filed :year%>
+<br>
+
+<%= f.label :price%>
+<%= f.text_filed :price%>
+<br>
+
+<%= form.submit "submit"%>
+<% end %>
+
+
+<%= form_for @car, cars_path %>
 
 <%= render 'form', car: @car %>
 

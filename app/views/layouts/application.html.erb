@@ -11,7 +11,26 @@
 
   <body>
        <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p> 
+       <p class="alert"><%= alert %></p>
+        
+       <%# SignUp, signin,signOut %>
+       <% if (user_signed_in?)%>
+       <%= link_to 'signOut', new_user_session_path, method: :delete%>
+       <%= link_to 'SignIn', edit_user_registration_path %>
+
+       <% else %>
+       <%=  link_to 'signIn', new_user_session_path %>
+
+       <% end %>
+
+       <% if (user_signed_in?)%>
+      <%= link_to 'edit', edit_user_registration_path %>
+
+      <%else%>
+      <%=  link_to 'SignUp', new_user_registration_path %>
+
+      <%end%>
+       <%= link_to 'cars', cars_path %>
 
     <%= yield %>
   </body>

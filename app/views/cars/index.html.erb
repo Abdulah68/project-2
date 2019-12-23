@@ -1,5 +1,5 @@
 <table>
-  <thead>
+  <%# <thead>
     <tr>
       <th>image</th>
       <th>Name</th>
@@ -8,12 +8,12 @@
       <th>price</th>
       <th colspan="5"></th>
     </tr>
-  </thead>
+  </thead> %>
 
   <tbody>
     <% @cars.each do |car| %>
       <tr>
-         <td><%= car.image %></td>
+         <td><img src=<%= car.img%> height="100" width="100"></td>
         <td><%= car.name %></td>
         <td><%= car.make %></td>
         <td><%= car.year %></td>
