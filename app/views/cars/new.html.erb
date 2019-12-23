@@ -1,0 +1,21 @@
+<h1>New Car</h1>
+
+<%= render 'form', car: @car %>
+
+<%= form_for @car, url:{action: "create"} do|f| %>
+     <%= f.label :image, 'image' %><br>
+    <%= f.text_field :image %><br>
+    <%= f.label :name, 'Name' %><br>
+    <%=f.text_field :name%><br>
+    <%= f.label :make, 'make' %><br>
+    <%= f.text_field :make %><br><br>
+    <%= f.label :year, 'year' %><br>
+    <%= f.text_field :year %><br><br>
+    <%= f.label :price, 'price' %><br>
+    <%= f.text_field :price %><br><br>
+    <%= f.submit "sumbit"%>
+
+<%= link_to 'Back', cars_path %>
+
+
+
