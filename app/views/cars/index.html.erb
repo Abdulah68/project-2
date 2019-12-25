@@ -5,27 +5,24 @@
 
      
     <% @cars.each do |car| %>
-      
-         <div class="flex-container">
-        <div class="item1"><a href="/cars/<%= car.id%>"> 
+    <div class="card" style="width: 18rem;">
+  <a href="/cars/<%= car.id%>"> 
         <img src=<%= car.img%> height="150" width="150"><br>
       </a>
-      
-      <strong > Name:</strong>
-        <%= car.name %><br><br>
+  <div class="card-body">
+    <strong > Name:</strong>
+    <%= car.name %><br><br>
 
-        <strong>Make:</strong>
-        <%= car.make %><br><br>
+    <strong>Make:</strong>
+      <%= car.make %><br><br>
 
-        <strong>Year:</strong>
+      <strong>Year:</strong>
         <%= car.year %><br><br>
 
-
-      
-      </div>
-        
-    </div>
-      
+   
+  </div>
+</div>
+          
     <% end %>
     
   </body>
