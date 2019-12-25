@@ -1,26 +1,37 @@
-<p id="notice"> <%= notice%> </p>
 
+<h1> Show Cars</h1>
 <p>
-<strong>image:</strong>
-  <%= car.img%>
-</p>
 
-<p>
+<img src=<%= @car.img%> height="200" width="200"> </p>
+
+<p> 
 <strong>name:</strong>
-  <%= car.name%>
-</p>
+  <%= @car.name%> </p>
+
 
 <p>
 <strong>make:</strong>
-  <%= car.make%>
-</p>
-
-<p>
+ <%= @car.make%> </p>
+<p> 
 <strong>year:</strong>
-  <%= car.year%>
-</p>
+ <%= @car.year%> 
+ </p>
 
 <p>
 <strong>price:</strong>
-  <%= car.price%>
-</p>
+  <%= @car.price%> 
+  </p>
+
+  <p>
+<strong>Phone:</strong>
+  <%= @car.Phone%> 
+  </p>
+
+
+<% if current_user.id == @car.user.id %>
+ <%= link_to 'Edit', edit_car_path(@car) %>|
+ <%= link_to 'Delete', @car, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+ <% end %>
+ <br>
+ <%= link_to 'Back', cars_path %> |

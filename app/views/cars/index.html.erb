@@ -11,22 +11,37 @@
   </thead> %>
 
   <tbody>
+
+      <%= link_to 'Add New Car', new_car_path %>
     <% @cars.each do |car| %>
       <tr>
-         <td><img src=<%= car.img%> height="100" width="100"></td>
-        <td><%= car.name %></td>
-        <td><%= car.make %></td>
+         
+         
+    <td>
+    
+      <a href="/cars/<%= car.id%>"> 
+        <img src=<%= car.img%> height="100" width="100">
+      </a>
+      </td> 
+      <br>
+
+ 
+         
+        <td><%= car.name %></td><br>
+
+        <td><%= car.make %></td><br>
+
         <td><%= car.year %></td>
+
         <td><%= car.price %></td>
-        <td><%= link_to 'Show', car %></td>
-        <td><%= link_to 'Edit', edit_car_path(car) %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ 
+        <td><%= car.Phone %></td>
+      
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Car', new_car_path %>
+
 

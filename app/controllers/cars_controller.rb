@@ -1,11 +1,10 @@
 class CarsController < ApplicationController
-
-  before_action :set_car, only: [:show, :destroy]
   before_action :authenticate_user!, only: [:edit, :update, :destroy, :create, :new]
 
   # GET method to get all carss from database
   def index
     @cars= Car.all
+    
   end
 
   # GET method to get a car by id   
@@ -22,24 +21,29 @@ class CarsController < ApplicationController
 def create 
   @car = current_user.cars.new(car_params)
   @car.save
+
+  redirect_to car_path(@car)
 end
   
 
  # GET method for editing a car based on id   
  def edit   
-  @car = current_user.cars.find(params[:id])   
+  @car = current_user.cars.find(params[:id])
+  
  end 
+
+ def update
+  @car = Car.find(params[:id])
+  @car.update(car_params)
+
+  redirect_to car_path(@car)
+ end
 
 # DELETE method for deleting a car from database based on id   
 def destroy   
   @car = Car.find(params[:id])   
-  if @car.delete   
-    flash[:notice] = 'car deleted!'   
-    redirect_to root_path   
-  else   
-    flash[:error] = 'Failed to delete this car!'   
-    render :destroy   
-  end   
+   @car.destroy
+   redirect_to cars_path 
 end 
 
 

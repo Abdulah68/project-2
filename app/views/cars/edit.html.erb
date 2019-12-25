@@ -1,32 +1,37 @@
-<h1>Editing Car</h1>
-<%= form_for @car, url:{action: "edit"} do |f|%>
+<h1>Edit  Car</h1>
+
+<%= form_for @car, url:{action: "update"} do |f|%>
 
 <%= f.label :img%>
-<%= f.text_filed :img%>
+<%= f.text_field :img%><br>
 <br>
 <%= f.label :name%>
-<%= f.text_filed :name%>
+<%= f.text_field :name%><br>
 <br>
 
 <%= f.label :make%>
-<%= f.text_filed :make%>
+<%= f.text_field :make%><br>
 <br>
 
 <%= f.label :year%>
-<%= f.text_filed :year%>
+<%= f.text_field :year%><br>
 <br>
 
 <%= f.label :price%>
-<%= f.text_filed :price%>
+<%= f.text_field :price%><br>
 <br>
 
-<%= form.submit "submit"%>
+<%= f.label :Phone%>
+<%= f.text_field :Phone%><br>
+<br>
+
+<%= f.submit%>
 <% end %>
 
+<% if current_user.id == @car.user.id %>
+ <td><%= link_to 'Edit', edit_car_path(@car) %></td>
+ <td><%= link_to 'Delete', @car, method: :delete, data: { confirm: 'Are you sure?' } %></td
+<%end%>
 
-<%= form_for @car, cars_path %>
 
-<%= render 'form', car: @car %>
 
-<%= link_to 'Show', @car %> |
-<%= link_to 'Back', cars_path %>
