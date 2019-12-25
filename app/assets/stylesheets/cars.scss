@@ -19,4 +19,45 @@ table {
     width: 50px;
     text-align: left;
 }
+div.card{
+    
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
 
+}
+h1,h2 , p , h3{
+    text-align: center;
+}
+
+form.button_to {
+    text-align: center;
+}
+ form.new_car{
+     text-align: center;
+ }
+
+
+body{
+    background-image: url('https://i.pinimg.com/236x/60/66/d6/6066d66623793a99653363cc61d71390.jpg');
+}
+#car_img , #car_name , #car_make , #car_year , #car_price, #car_Phone{
+    text-align: left;
+}
+nav{
+    width:100%
+}
+
+.field{
+    text-align: center;
+}
+
+.actions{
+    text-align: center;  
+}
