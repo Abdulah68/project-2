@@ -48,8 +48,9 @@ end
 
 
 private
+
 def car_params
-  params.require(:car).permit(:img, :name, :make, :year, :price)
+  params.require(:car).permit(:img, :name, :make, :year, :price, :Phone)
 end
 
 end

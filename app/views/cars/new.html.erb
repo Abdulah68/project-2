@@ -1,32 +1,33 @@
 <h1>New Car</h1>
 
 <%= form_for @car, url:{action: "create"} do |f|%>
-
-<%= f.label :img%>
+<div class="box">
+<%= f.label :image%>
 <%= f.text_field :img%>
-<br><br>
+
 
 <%= f.label :name%>
 <%= f.text_field :name%>
-<br><br>
+
 
 <%= f.label :make%>
 <%= f.text_field :make%>
-<br><br>
+
 
 <%= f.label :year%>
 <%= f.text_field :year%>
-<br><br>
+
 
 <%= f.label :price%>
 <%= f.text_field :price%>
-<br><br>
+
 
 <%= f.label :Phone%>
 <%= f.text_field :Phone%>
-<br><br>
+
 
 <%= f.submit "create"%>
+</div>
 <% end %>
 
 

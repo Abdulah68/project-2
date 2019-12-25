@@ -1,7 +1,8 @@
 
 <h1> Show Cars</h1>
-<p>
 
+
+<p>
 <img src=<%= @car.img%> height="200" width="200"> </p>
 
 <p> 
@@ -24,14 +25,22 @@
 
   <p>
 <strong>Phone:</strong>
+
   <%= @car.Phone%> 
   </p>
 
 
-<% if current_user.id == @car.user.id %>
- <%= link_to 'Edit', edit_car_path(@car) %>|
- <%= link_to 'Delete', @car, method: :delete, data: { confirm: 'Are you sure?' } %>
 
+
+
+
+<% if current_user.id == @car.user.id %>
+<div class="btn-group" role="group" aria-label="Basic example">
+ <%= link_to 'Edit', edit_car_path(@car) , :class => "btn btn-secondary" %>
+ <%= link_to 'Delete', @car, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-secondary" %>
+</div>
  <% end %>
  <br>
- <%= link_to 'Back', cars_path %> |
+ <div class="btn-group1" role="group" aria-label="Basic example">
+ <%= link_to 'Back', cars_path , :class => "btn btn-secondary1"%> 
+ </div>

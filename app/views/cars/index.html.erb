@@ -1,46 +1,36 @@
-<table>
-  <%# <thead>
-    <tr>
-      <th>image</th>
-      <th>Name</th>
-      <th>make</th>
-      <th>Year</th>
-      <th>price</th>
-      <th colspan="5"></th>
-    </tr>
-  </thead> %>
 
-  <tbody>
 
-      <%= link_to 'Add New Car', new_car_path %>
+
+  <body>
+
+     
     <% @cars.each do |car| %>
-      <tr>
-         
-         
-    <td>
-    
-      <a href="/cars/<%= car.id%>"> 
-        <img src=<%= car.img%> height="100" width="100">
-      </a>
-      </td> 
-      <br>
-
- 
-         
-        <td><%= car.name %></td><br>
-
-        <td><%= car.make %></td><br>
-
-        <td><%= car.year %></td>
-
-        <td><%= car.price %></td>
- 
-        <td><%= car.Phone %></td>
       
-      </tr>
+         <div class="flex-container">
+        <div class="item1"><a href="/cars/<%= car.id%>"> 
+        <img src=<%= car.img%> height="150" width="150"><br>
+      </a>
+      
+      <strong > Name:</strong>
+        <%= car.name %><br><br>
+
+        <strong>Make:</strong>
+        <%= car.make %><br><br>
+
+        <strong>Year:</strong>
+        <%= car.year %><br><br>
+
+
+      
+      </div>
+        
+    </div>
+      
     <% end %>
-  </tbody>
-</table>
+    
+  </body>
+  
+
 
 
 
