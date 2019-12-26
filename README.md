@@ -8,7 +8,7 @@
 ### 4Cars
 
 ## My Project Deployment
-
+![4Cars]
 ## Technologies used in the project
 
 * Visual Studio Code
@@ -30,10 +30,10 @@
 * As a user, I must not be able to edit or delete other users' resources
 
 ## Wire frame 
-![wire frame]('wire-frame.jpg')
+![wire frame](wire-frame.jpg)
 
 ## ERD
-![ERD]('ERD.jpg')
+![ERD](ERD.jpg)
 
 
 # Describe any lines or function in the code
