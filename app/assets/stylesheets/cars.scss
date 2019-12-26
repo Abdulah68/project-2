@@ -43,9 +43,7 @@ form.button_to {
      text-align: center;
  }
 
-#car_img , #car_name , #car_make , #car_year , #car_price, #car_Phone{
-    text-align: left;
-}
+
 nav{
     width:100%
 }
@@ -56,4 +54,15 @@ nav{
 
 .actions{
     text-align: center;  
+}
+.btn-groub{
+    position: relative;
+    display: -webkit-box;
+    vertical-align: top;
+}
+.edit-car{
+text-align: center;
+}
+#car_img , #car_name , #car_make , #car_year , #car_price, #car_Phone{
+    text-align: center;
 }

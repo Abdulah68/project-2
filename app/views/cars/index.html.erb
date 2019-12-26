@@ -2,10 +2,12 @@
 
      
     <% @cars.each do |car| %>
+
     <div class="card" style="width: 18rem;">
   <a href="/cars/<%= car.id%>"> 
-        <img src=<%= car.img%> height="150" width="150"><br>
-      </a>
+  <img src=<%= car.img%> height="150" width="150"><br>
+  </a>
+
   <div class="card-body">
     <strong > Name:</strong>
     <%= car.name %><br>
@@ -13,16 +15,15 @@
     <strong>Make:</strong>
       <%= car.make %><br>
 
-      <strong>Year:</strong>
-        <%= car.year %><br>
+    <strong>Year:</strong>
+    <%= car.year %><br>
 
-   
   </div>
 </div>
           
-    <% end %>
+ <% end %>
     
-  </body>
+ </body>
   
 
 

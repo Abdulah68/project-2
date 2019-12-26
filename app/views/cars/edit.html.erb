@@ -1,7 +1,7 @@
 <h1>Edit My  Car</h1>
 
 <%= form_for @car, url:{action: "update"} do |f|%>
-
+<div class="edit-car">
 <%= f.label :img%>
 <%= f.text_field :img%><br>
 <br>
@@ -24,16 +24,11 @@
 <%= f.label :Phone%>
 <%= f.text_field :Phone%><br>
 <br>
-
+</div>
 <%= f.submit%>
 <% end %>
 
-<% if current_user.id == @car.user.id %>
-<div class="btn-group" role="group" aria-label="Basic example">
- <%= link_to 'Edit', edit_car_path(@car) , :class => "btn btn-secondary" %>
- <%= link_to 'Delete', @car, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-secondary" %>
-</div>
-<%end%>
+
 
 
 
